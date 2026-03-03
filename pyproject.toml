@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "livinglink"
+version = "0.1.0"
+description = "LivingLink: safe digital assistant foundations"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "LivingLink Contributors" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["livinglink*"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+ui = [
+  "PySide6>=6.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
